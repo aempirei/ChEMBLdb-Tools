@@ -1,0 +1,15 @@
+ChEMBLdb-Tools
+Various Tools Using ChEMBLdb
+Copyright(c) 2012 by Christopher Abad | 20 GOTO 10
+
+email: aempirei@gmail.com aempirei@256.bz
+http://www.256.bz/ http://www.twentygoto10.com/
+git://github.com/aempirei/ChEMBLdb-Tools.git
+https://github.com/aempirei/ChEMBLdb-Tools/
+aim: ambientempire
+
+This contains various tools that use the ChEMBLdb mysql database.
+
+The tools are currently written against the chembl_13 revision.
+
+ftp://ftp.ebi.ac.uk/pub/databases/chembl/ChEMBLdb/releases/chembl_13/
