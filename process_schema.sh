@@ -14,7 +14,7 @@ perl -pe 's=/\*.*?\*/\s*==g' \
 | perl -pe 's/(^\s*`\w+`.*)\bdate/\1Date/' \
 | perl -pe 's/(^\s*`\w+`.*)\blongtext/\1String/' \
 | perl -pe 's/(^\s*`\w+`.*)\btext/\1String/' \
-| perl -pe 's/^\s*`(\w+)`\s+([^,\s]+),?(.*)/\t@{[sprintf("%-50s","property :$1, $2")]} #\3/' \
+| perl -pe 's/^\s*`(\w+)`\s+([^,\s]+),?(.*)/\t@{[sprintf("%-35s%-15s","property :$1,", "$2")]} #\3/' \
 | perl -pe 's/C\w+T\s+`\w+`\s+F\w+N KEY\s+\(`(\w+)`\)\s+R\w+S\s+`(\w+)`\s+\(`(\w+)`\).*/\tbelongs_to :\2, :child_key => [ :\1 ], :parent_key => [ :\3 ]/' \
 | perl -pe 's/((\w+\s*)?KEY)/\t# \1/' \
 | perl -pe 's*class\s+(\w+)*class @{[join("", map { $_ = ucfirst($_) } split(/_/, $1))]}*' \
